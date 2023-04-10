@@ -1,0 +1,5 @@
+/* all of app-dividers who are not the first element */
+:host:not(:first-of-type) {
+  display: block;
+  margin-top: 20px;
+}

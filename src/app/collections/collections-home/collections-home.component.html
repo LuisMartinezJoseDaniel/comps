@@ -5,3 +5,24 @@
   [data]="data"
   [headers]="headers"
 ></app-table>
+
+<app-divider>Tab Menu</app-divider>
+
+<app-tabs>
+  <!-- ./ -> relative to this route, same as folders -->
+  <!-- [] -> all inside of array, Angular build a link using that data -->
+  <!-- ['./', 'BOO', 'HI'] -> /collections/boo/hi -->
+  <!-- [routerLinkActiveOptions]="{exact:true}" -> exact match, avoid, two active links -->
+  <a
+    class="item"
+    [routerLinkActiveOptions]="{ exact: true }"
+    [routerLink]="['./']"
+    routerLinkActive="active"
+  >
+    Biography
+  </a>
+  <a class="item" routerLink="companies" routerLinkActive="active">
+    Companies
+  </a>
+  <a class="item" routerLink="partners" routerLinkActive="active">Partners </a>
+</app-tabs>
